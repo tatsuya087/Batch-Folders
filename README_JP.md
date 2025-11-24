@@ -1,6 +1,6 @@
 # Batch Folders
 
-Batch Foldersは、コンテキストメニューからワンクリックで事前に定義されたフォルダセットを作成できるWindowsアプリケーションです。
+Batch Foldersは、ワンクリックで複数のフォルダ一気に作成できるWindowsアプリケーションです。
 
 ## 特徴
 
