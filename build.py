@@ -11,7 +11,7 @@ PyInstaller.__main__.run([
     os.path.join(src_path, 'batch_folders.py'),
     '--onefile',
     '--windowed',
-    '--name=BatchFolders',
+    '--name=Batch Folders 1.00',
     '--clean',
     f'--add-data={font_path};.',
     f'--add-data={icon_path};.',
