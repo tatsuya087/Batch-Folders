@@ -178,6 +178,14 @@ class BatchFoldersGUI(ctk.CTk):
         self.folders_textbox = ctk.CTkTextbox(right_frame, font=self.text_font)
         self.folders_textbox.grid(row=2, column=0, sticky="nsew", pady=(0, 20))
         
+        # Configure internal text widget to ensure font is applied during IME composition
+        # Use tuple format (Family, Size) which is robust for Tkinter
+        font_tuple = (self.font_name, 12)
+        self.folders_textbox._textbox.configure(font=font_tuple)
+        
+        # Re-apply on focus in to ensure it persists
+        self.folders_textbox._textbox.bind("<FocusIn>", lambda e: self.folders_textbox._textbox.configure(font=font_tuple))
+        
         self.save_btn = ctk.CTkButton(right_frame, text=self.t["save_update"], command=self.save_and_update, font=self.main_font, height=40)
         self.save_btn.grid(row=3, column=0, sticky="ew")
 
