@@ -157,7 +157,7 @@ class BatchFoldersGUI(ctk.CTk):
         
         ctk.CTkLabel(settings_frame, text=self.t["lang_label"], font=self.text_font).pack(anchor="w", padx=10, pady=(5,0))
         self.lang_var = ctk.StringVar(value=self.lang)
-        self.lang_combo = ctk.CTkComboBox(settings_frame, values=["ja", "en"], command=self.change_language, variable=self.lang_var, font=self.text_font)
+        self.lang_combo = ctk.CTkComboBox(settings_frame, values=["ja", "en"], command=self.change_language, variable=self.lang_var, font=self.text_font, state="readonly")
         self.lang_combo.pack(fill="x", padx=10, pady=5)
 
         self.remove_reg_btn = ctk.CTkButton(settings_frame, text=self.t["remove_menu"], command=self.remove_registry, fg_color="#FF5555", hover_color="#CC0000", font=self.text_font)
