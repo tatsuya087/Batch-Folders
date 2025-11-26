@@ -2,18 +2,15 @@ import json
 import os
 import sys
 
-CONFIG_FILE = "config.json"
+CONFIG_FILE = "Batch Folders Config.json"
 
 class ConfigManager:
     def __init__(self, config_path=None):
         if config_path:
             self.config_file = config_path
         else:
-            if getattr(sys, 'frozen', False):
-                base_path = os.path.dirname(sys.executable)
-            else:
-                base_path = os.path.dirname(os.path.abspath(__file__))
-            self.config_file = os.path.join(base_path, CONFIG_FILE)
+            user_home = os.path.expanduser('~')
+            self.config_file = os.path.join(user_home, CONFIG_FILE)
         
         self.config = self._load_config()
 
