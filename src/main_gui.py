@@ -19,7 +19,7 @@ TRANSLATIONS = {
         "select_set_label": "セットを選択してください",
         "editing_label": "編集中: {}",
         "save_update": "保存してメニューを更新",
-        "remove_menu": "すべて削除",
+        "remove_menu": "すべての設定をリセット",
         "new_set_title": "新しいセット",
         "new_set_prompt": "新しいセット名を入力:",
         "rename_set_title": "セット名の変更",
@@ -45,7 +45,7 @@ TRANSLATIONS = {
         "select_set_label": "Select a Set",
         "editing_label": "Editing: {}",
         "save_update": "Save & Update Menu",
-        "remove_menu": "Remove All",
+        "remove_menu": "Reset All Settings",
         "new_set_title": "New Set",
         "new_set_prompt": "Enter name for new set:",
         "rename_set_title": "Rename Set",
@@ -175,7 +175,7 @@ class BatchFoldersGUI(ctk.CTk):
         self.helper_label.grid(row=1, column=0, sticky="ew", pady=(0, 5))
         self.helper_label.bind('<Configure>', lambda e: self.helper_label.configure(wraplength=e.width))
 
-        self.folders_textbox = ctk.CTkTextbox(right_frame, font=self.text_font)
+        self.folders_textbox = ctk.CTkTextbox(right_frame, font=self.text_font, state="disabled")
         self.folders_textbox.grid(row=2, column=0, sticky="nsew", pady=(0, 20))
         
         # Configure internal text widget to ensure font is applied during IME composition
@@ -242,6 +242,7 @@ class BatchFoldersGUI(ctk.CTk):
         self.folders_textbox.insert("1.0", "\n".join(folders))
         
         self.remove_btn.configure(state="normal")
+        self.folders_textbox.configure(state="normal")
 
     def _center_dialog(self, dialog_width=300, dialog_height=200):
         x = self.winfo_x() + (self.winfo_width() // 2) - (dialog_width // 2)
@@ -287,6 +288,8 @@ class BatchFoldersGUI(ctk.CTk):
                 self.selected_set_name = None
                 self.set_label.configure(text=self.t["select_set_label"])
                 self.remove_btn.configure(state="disabled")
+                self.folders_textbox.configure(state="disabled")
+                self.folders_textbox.configure(state="disabled")
                 
                 sets = self.config_manager.get_sets()
                 self.registry_manager.register_context_menu(sets)
