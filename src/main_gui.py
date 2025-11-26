@@ -175,7 +175,7 @@ class BatchFoldersGUI(ctk.CTk):
         self.helper_label.grid(row=1, column=0, sticky="ew", pady=(0, 5))
         self.helper_label.bind('<Configure>', lambda e: self.helper_label.configure(wraplength=e.width))
 
-        self.folders_textbox = ctk.CTkTextbox(right_frame, font=self.text_font, state="disabled")
+        self.folders_textbox = ctk.CTkTextbox(right_frame, font=self.text_font)
         self.folders_textbox.grid(row=2, column=0, sticky="nsew", pady=(0, 20))
         
         # Configure internal text widget to ensure font is applied during IME composition
@@ -242,7 +242,6 @@ class BatchFoldersGUI(ctk.CTk):
         self.folders_textbox.insert("1.0", "\n".join(folders))
         
         self.remove_btn.configure(state="normal")
-        self.folders_textbox.configure(state="normal")
 
     def _center_dialog(self, dialog_width=300, dialog_height=200):
         x = self.winfo_x() + (self.winfo_width() // 2) - (dialog_width // 2)
@@ -288,8 +287,6 @@ class BatchFoldersGUI(ctk.CTk):
                 self.selected_set_name = None
                 self.set_label.configure(text=self.t["select_set_label"])
                 self.remove_btn.configure(state="disabled")
-                self.folders_textbox.configure(state="disabled")
-                self.folders_textbox.configure(state="disabled")
                 
                 sets = self.config_manager.get_sets()
                 self.registry_manager.register_context_menu(sets)
@@ -313,7 +310,21 @@ class BatchFoldersGUI(ctk.CTk):
     def remove_registry(self):
         success, msg = self.registry_manager.unregister_context_menu()
         if success:
-            messagebox.showinfo(self.t["success_title"], self.t["success_remove_menu"], parent=self)
+            try:
+                if os.path.exists(self.config_manager.config_file):
+                    os.remove(self.config_manager.config_file)
+                
+                self.config_manager.config = {"sets": {}}
+                
+                self.refresh_sets_list()
+                self.folders_textbox.delete("1.0", "end")
+                self.selected_set_name = None
+                self.set_label.configure(text=self.t["select_set_label"])
+                self.remove_btn.configure(state="disabled")
+                
+                messagebox.showinfo(self.t["success_title"], self.t["success_remove_menu"], parent=self)
+            except Exception as e:
+                messagebox.showerror(self.t["error_title"], f"Settings reset failed: {e}", parent=self)
         else:
             messagebox.showerror(self.t["error_title"], msg, parent=self)
 
