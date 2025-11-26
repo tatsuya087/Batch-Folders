@@ -2,7 +2,7 @@
 
 [日本語のREADMEはこちら](README_JP.md)
 
-Batch Folders is a Windows application that allows you to create a predefined set of folders with a single click from the context menu.
+Batch Folders is a Windows application that allows you to create multiple folders at once with a single click.
 
 ## Features
 
