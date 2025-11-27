@@ -5,7 +5,7 @@
 Batch Folders
 </h1>
 
-Batch Foldersは、ワンクリックで複数のフォルダ一気に作成できるWindowsアプリケーションです。
+Batch Foldersは、ワンクリックで複数のフォルダーを一括で作成することができるWindowsアプリケーションです。
 
 ## 特徴
 

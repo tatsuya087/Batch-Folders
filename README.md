@@ -7,9 +7,9 @@ Batch Folders
 
 [日本語のREADMEはこちら](README_JP.md)
 
-Batch Folders is a Windows application that allows you to create multiple folders at once with a single click.
+Batch Folders is a Windows application that allows you to create multiple folders in batch with a single click.
 
-Batch Foldersは、ワンクリックで複数のフォルダ一気に作成できるWindowsアプリケーションです。
+Batch Foldersは、ワンクリックで複数のフォルダーを一括で作成することができるWindowsアプリケーションです。
 
 ## Features
 
