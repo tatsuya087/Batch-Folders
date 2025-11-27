@@ -4,7 +4,7 @@ import os
 print("Building Batch Folders EXE...")
 
 src_path = os.path.join(os.getcwd(), "src")
-font_path = os.path.join(src_path, "IBMPlexSansJP-SemiBold.ttf")
+font_path = os.path.join(src_path, "GenYoGothic2JP-B.otf")
 icon_path = os.path.join(src_path, "icon.ico")
 
 PyInstaller.__main__.run([
