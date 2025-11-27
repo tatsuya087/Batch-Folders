@@ -31,6 +31,8 @@ Batch Foldersは、ワンクリックで複数のフォルダ一気に作成で�
    - Select `Batch Folders` > `[Your Set Name]`.
    - The folders will be created instantly.
 
+https://github.com/user-attachments/assets/9bcaca61-c935-48b3-9cea-ffb334374549
+
 ## Development
 
 ### Requirements
