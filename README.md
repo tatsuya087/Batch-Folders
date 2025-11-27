@@ -19,7 +19,7 @@ Batch Foldersは、ワンクリックで複数のフォルダ一気に作成で�
    - Run `BatchFolders.exe`.
    - Click "Add Set" and give it a name.
    - Enter the folder names you want to create (one per line).
-   - Click "Save & Update Menu".
+   - Click "Save & Update".
 
 3. **Use from Context Menu**
    - Right-click on your Desktop or inside any folder.
