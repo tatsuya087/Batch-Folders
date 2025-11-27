@@ -6,7 +6,7 @@ Batch Folders
 </h1>
 
 <p align="center">
-[日本語のREADMEはこちら](README_JP.md)
+<a href="README_JP.md">日本語のREADMEはこちら</a>
 </p>
 
 <p align="center">
