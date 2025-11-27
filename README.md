@@ -5,16 +5,19 @@
 Batch Folders
 </h1>
 
+<p align="center">
 [日本語のREADMEはこちら](README_JP.md)
+</p>
 
-Batch Folders is a Windows application that allows you to create multiple folders in batch with a single click.
+<p align="center">
+Batch Folders is a Windows application that allows you to create multiple folders in batch with a single click.</p>
 
-Batch Foldersは、ワンクリックで複数のフォルダーを一括で作成することができるWindowsアプリケーションです。
+<hr>
 
 ## Features
 
-- Right-click anywhere to create a set of folders via the context menu.
-- Supports both English and Japanese languages.
+- Instantly create multiple folders with a right-click.
+- Supports English and Japanese UI.
 - Create, rename, and manage multiple folder sets.
 
 ## Usage
@@ -27,13 +30,13 @@ Batch Foldersは、ワンクリックで複数のフォルダーを一括で作�
    - Click "Save & Update".
 
 3. **Use from Context Menu**
-   - Right-click on your Desktop or inside any folder.
+   - Right-click on your Desktop or in File Explorer.
    - Select `Batch Folders` > `[Your Set Name]`.
-   - The folders will be created instantly.
+   - Folders will be created.
 
 https://github.com/user-attachments/assets/9bcaca61-c935-48b3-9cea-ffb334374549
 
-## Development
+## Building
 
 ### Requirements
 
