@@ -1,4 +1,9 @@
-# Batch Folders
+<h1 align="center">
+<sub>
+<img width="38" src="https://github.com/user-attachments/assets/465e2016-5615-48a9-94a9-676d632f9e86" />
+</sub>
+Batch Folders
+</h1>
 
 Batch Foldersは、ワンクリックで複数のフォルダ一気に作成できるWindowsアプリケーションです。
 
